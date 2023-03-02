@@ -1,15 +1,3 @@
-<script>
-import SidebarLink from './SidebarLink'
-import { collapsed, toggleSidebar, sidebarWidth } from './state'
-
-export default {
-  props: {},
-  components: { SidebarLink },
-  setup() {
-    return { collapsed, toggleSidebar, sidebarWidth }
-  }
-}
-</script>
 
 <template>
   <div class="sidebar" :style="{ width: sidebarWidth }">
@@ -22,11 +10,11 @@ export default {
     </h1>
 
     <SidebarLink to="/" icon="fas fa-home">Menu EOL</SidebarLink>
-    <SidebarLink to="/dashboard" icon="fas fa-columns">Menu Negocios</SidebarLink>
-    <SidebarLink to="/analytics" icon="fas fa-chart-bar">Menu Pagos</SidebarLink>
-    <SidebarLink to="/friends" icon="fas fa-users">Menu PEC</SidebarLink>
-    <SidebarLink to="/image" icon="fas fa-image">Menu Papel</SidebarLink>
-    <SidebarLink to="/peel" icon="fas fa-image">Menu PEEL</SidebarLink>
+    <SidebarLink to="/menuNegocios" icon="fas fa-columns">Menu Negocios</SidebarLink>
+    <SidebarLink to="/menuPagos" icon="fas fa-chart-bar">Menu Pagos</SidebarLink>
+    <SidebarLink to="/menuPec" icon="fas fa-users">Menu PEC</SidebarLink>
+    <SidebarLink to="/menuPapel" icon="fas fa-image">Menu Papel</SidebarLink>
+    <SidebarLink to="/menuPeel" icon="fas fa-image">Menu PEEL</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -37,6 +25,18 @@ export default {
     </span>
   </div>
 </template>
+<script>
+import SidebarLink from './SidebarLink'
+import { collapsed, toggleSidebar, sidebarWidth } from './state'
+
+export default {
+  props: {},
+  components: { SidebarLink },
+  setup() {
+    return { collapsed, toggleSidebar, sidebarWidth }
+  }
+}
+</script>
 
 <style>
 :root {
